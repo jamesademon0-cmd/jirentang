@@ -1,0 +1,19 @@
+# WorkBuddy memory
+.workbuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log
+
+# 临时
+*.tmp
+.cache/
