@@ -1,5 +1,5 @@
 /* =========================================================
-   济仁堂中医养生馆 · 样式表
+   仁善堂中医养生馆 · 样式表
    主色：青墨绿  #1c3731
    辅色：朱砂红  #b1372e
    强调：金      #c69b50
@@ -255,39 +255,43 @@ a{ color: inherit; text-decoration: none; }
   z-index: 1;
 }
 .hero-tag{
-  font-family: var(--kai);
+  font-family: var(--serif);
   letter-spacing: 8px;
   color: var(--gold-soft);
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 500;
 }
 .hero-title{
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(56px, 10vw, 132px);
+  font-size: clamp(48px, 9vw, 120px);
   margin: 24px 0;
-  letter-spacing: 12px;
-  line-height: 1.1;
+  line-height: 1.05;
   text-shadow: 0 6px 30px rgba(0,0,0,.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hero-title span{
-  display: inline-block;
+.hero-line{
+  display: block;
+  white-space: nowrap;
+  letter-spacing: 12px;
   opacity: 0;
   transform: translateY(40px);
   animation: rise .9s cubic-bezier(.2,.8,.2,1) forwards;
 }
-.hero-title span:nth-child(1){ animation-delay: .1s; }
-.hero-title span:nth-child(2){ animation-delay: .2s; }
-.hero-title span:nth-child(3){ animation-delay: .3s; }
-.hero-title span:nth-child(4){ animation-delay: .4s; }
-.hero-title span:nth-child(5){ animation-delay: .5s; }
-.hero-title span:nth-child(6){ animation-delay: .55s; }
-.hero-title span:nth-child(7){ animation-delay: .65s; }
-.hero-title span:nth-child(8){ animation-delay: .75s; }
-.hero-title span:nth-child(9){ animation-delay: .85s; }
-.hero-title .sep{
+.hero-line:nth-child(1){ animation-delay: .1s; }
+.hero-line:nth-child(3){ animation-delay: .5s; }
+.hero-sep{
+  display: block;
   color: var(--gold);
-  margin: 0 6px;
-  animation-delay: .5s !important;
+  font-size: .45em;
+  line-height: 1;
+  margin: 10px 0 6px;
+  letter-spacing: 4px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: rise .9s cubic-bezier(.2,.8,.2,1) .3s forwards;
 }
 @keyframes rise{
   to{ opacity: 1; transform: translateY(0); }
@@ -295,7 +299,7 @@ a{ color: inherit; text-decoration: none; }
 .hero-sub{
   font-size: 17px;
   line-height: 1.9;
-  letter-spacing: 1.5px;
+  letter-spacing: .5px;
   max-width: 760px;
   margin: 0 auto 38px;
   color: rgba(255,247,224,.85);
