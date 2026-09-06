@@ -7,6 +7,14 @@
   <meta name="keywords" content="中医养生馆,针灸,推拿,艾灸,经络调理,中医调理,亚健康" data-page-node-id="GeHiUyN1qhtQrFK4hSMF3O" />
   <title>仁善堂中医养生馆 | 调和阴阳 · 固本培元</title>
 
+  <!-- PWA：可安装 / 全屏 / 离线 -->
+  <meta name="theme-color" content="#1c3731" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="仁善堂" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
   <!-- 字体：思源宋体（标题）、马善政楷（点缀）、思源黑体（正文）-->
   <link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="uFGEhhaDCwl6JkSZiTk12j">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-page-node-id="gZYtMuyDzSjeaDI9Tf1XFe">
@@ -1107,5 +1115,15 @@
   </a>
 
   <script src="script.js"></script>
+  <script>
+    // 注册 Service Worker，使网站可离线、可"添加到主屏幕"当作 App 使用
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (e) {
+          console.log('[仁善堂] Service Worker 注册失败：', e);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
